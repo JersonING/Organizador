@@ -1,0 +1,293 @@
+body {
+    font-family: 'Baloo Tammudu 2', cursive;
+    background-image: url('https://www.transparenttextures.com/patterns/bright-squares.png');
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 10px;
+}
+
+h1 {
+    font-family: 'Fredoka One', cursive;
+    text-align: center;
+    color: #ff6f61;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.6); /* 40% de transparencia */
+    border-radius: 15px; /* Bordes curvos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    overflow: hidden; /* Para que los bordes curvos afecten también a los elementos internos */
+    margin: 0 auto; /* Centrar la tabla */
+    border: 2px solid #ADD8E6; /* Borde azul claro */
+}
+
+/* Bordes y estilos para celdas */
+th, td {
+    border: 1px solid #ADD8E6; /* Bordes azul claros en celdas */
+    padding: 10px;
+    vertical-align: top;
+}
+
+th {
+    background-color: rgba(255, 111, 97, 0.8); /* Fondo del encabezado con transparencia */
+    color: white;
+    font-family: 'Fredoka One', cursive;
+}
+
+#add-project-row td {
+    background-color: rgba(255, 229, 229, 0.8); /* Fondo con transparencia */
+}
+
+input[type="text"], select {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-family: 'Baloo Tammudu 2', cursive;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #ff4d4d;
+}
+
+/* Estilos para los botones de agregar tarea */
+.add-task-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #ff6f61;
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.add-task-btn:hover {
+    color: #ff4d4d;
+}
+
+/* Estilo para el botón de eliminar proyecto */
+.delete-project-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #ff6f61;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.delete-project-btn:hover {
+    color: #ff4d4d;
+}
+
+/* Ajustes para las tareas */
+.task-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.task-item input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.task-item input[type="text"] {
+    flex: 1;
+    margin-right: 5px;
+}
+
+.task-item .delete-task-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #ff6f61;
+    font-size: 16px;
+}
+
+.task-item .delete-task-btn:hover {
+    color: #ff4d4d;
+}
+
+/* Estilos para el contenedor de íconos al final de la lista de tareas */
+.icons-container {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.icons-container button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #ff6f61;
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+.icons-container button:hover {
+    color: #ff4d4d;
+}
+
+.priority-Urgente {
+    background-color: rgba(255, 111, 97, 0.8); /* Fondo rojo claro con transparencia */
+    color: white;
+}
+
+.priority-Importante {
+    background-color: rgba(255, 209, 102, 0.8); /* Fondo amarillo claro con transparencia */
+    color: #333;
+}
+
+.priority-Normal {
+    background-color: rgba(202, 255, 191, 0.8); /* Fondo verde claro con transparencia */
+    color: #333;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #777;
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    table {
+        font-size: 0.9em;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    button {
+        padding: 6px 10px;
+        font-size: 0.9em;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .task-item input[type="text"] {
+        flex: 1 1 100%;
+    }
+
+    .task-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .task-item .delete-task-btn {
+        align-self: flex-end;
+        margin-top: -35px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+
+    th, td {
+        padding: 5px;
+    }
+
+    button {
+        padding: 5px 8px;
+        font-size: 0.8em;
+    }
+
+    input[type="text"], select {
+        font-size: 0.9em;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+}
+
+/* ... código anterior ... */
+
+/* Estilos para centrar el contenedor de login */
+#login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar horizontalmente */
+    justify-content: center; /* Centrar verticalmente */
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+    border-radius: 15px; /* Bordes curvos */
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#login-container h1 {
+    font-family: 'Fredoka One', cursive;
+    color: #ff6f61;
+    margin-bottom: 20px;
+}
+
+#login-container p {
+    font-size: 1em;
+    color: #333;
+}
+
+#login-container input[type="password"] {
+    width: 20%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#login-container button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: 'Baloo Tammudu 2', cursive;
+    font-size: 1em;
+}
+
+#login-container button:hover {
+    background-color: #ff4d4d;
+}
+
+#login-error {
+    color: red;
+    margin-top: 10px;
+    display: none;
+}
+
+/* Estilo para el botón de eliminar proyecto */
+.delete-project-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #00008B; /* Azul oscuro */
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.delete-project-btn:hover {
+    color: #000080; /* Un tono más oscuro al pasar el cursor */
+}

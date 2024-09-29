@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestor de Proyectos de jersonING</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fuentes de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Contenedor de inicio de sesión -->
+    <div id="login-container">
+        <h1>Bienvenido a Gestor de Proyectos de jersonING</h1>
+        <p>Por favor, ingresa la contraseña para acceder:</p>
+        <input type="password" id="password-input" placeholder="Contraseña">
+        <button id="login-button">Ingresar</button>
+        <p id="login-error" style="color: red; display: none;">Contraseña incorrecta. Intenta de nuevo.</p>
+    </div>
+
+    <!-- Contenedor de la aplicación (oculto inicialmente) -->
+    <div id="app-container" style="display: none;">
+        <h1>Gestor de Proyectos de jersonING</h1>
+        <table id="project-table">
+            <thead>
+                <tr>
+                    <th>Proyecto</th>
+                    <th>Descripción</th>
+                    <th>Tareas</th>
+                    <th>Importancia</th>
+                </tr>
+            </thead>
+            <tbody id="project-body">
+                <!-- Aquí se agregarán los proyectos -->
+            </tbody>
+            <tfoot>
+                <tr id="add-project-row">
+                    <td><input type="text" id="new-project-name" placeholder="Nombre del proyecto"></td>
+                    <td><input type="text" id="new-project-description" placeholder="Descripción del proyecto"></td>
+                    <td>
+                        <div id="new-task-list">
+                            <!-- Aquí se agregarán las nuevas tareas -->
+                        </div>
+                        <!-- Botón para agregar nuevas tareas -->
+                        <button id="add-new-task-btn" class="add-task-btn" title="Agregar Tarea">➕</button>
+                    </td>
+                    <td>
+                        <select id="new-project-priority">
+                            <option value="Normal">Normal</option>
+                            <option value="Importante">Importante</option>
+                            <option value="Urgente">Urgente</option>
+                        </select>
+                        <button id="add-project-btn">Agregar Proyecto</button>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
